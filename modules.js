@@ -23,7 +23,7 @@
     var allTypical = [];
     var allModular = [];
 
-    var LIMIT = 100;
+    var LIMIT = 1000;
 
 
 
