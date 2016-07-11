@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Angular module loader test</title>
+</head>
+<body>
+
+    <script>console.time('Mode-' + window.location.hash.slice(1));</script>
+    <script src="angular.js"></script>
+    <!-- <script>
+        (function() {
+            var orig = angular.module;
+            angular.modules = [];
+            angular.module = function () {
+                var args = Array.prototype.slice.call(arguments);
+                if (arguments.length > 1) {
+                    angular.modules.push(arguments[0]);
+                }
+                return orig.apply(null, args);
+            };
+        })();
+    </script> -->
+    <script src="modules.js"></script>
+    <script>console.timeEnd('Mode-' + window.location.hash.slice(1));</script>
+
+</body>
+</html>
